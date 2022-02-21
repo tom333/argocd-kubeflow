@@ -14,8 +14,8 @@ spec:
     path: kubeflow-cert-manager
     repoURL: https://github.com/tom333/argocd-kubeflow.git
     targetRevision: HEAD
-    # kustomize:
-    #   version: v3.10.0
+    kustomize:
+      version: v3.2.0
   syncPolicy:
     syncOptions:
       - CreateNamespace=false
