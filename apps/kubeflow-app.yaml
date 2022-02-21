@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kubeflow
+  name: kubeflow-app
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -12,7 +12,7 @@ spec:
   project: datalab-project
   source:
     path: kubeflow/
-    repoURL: https://github.com/tom333/my-kluster.git
+    repoURL: https://github.com/tom333/argocd-kubeflow.git
     targetRevision: HEAD
     # kustomize:
     #   version: v3.5.4

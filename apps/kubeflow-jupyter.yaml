@@ -12,7 +12,7 @@ spec:
   project: datalab-project
   source:
     path: kubeflow-jupyter/
-    repoURL: https://github.com/tom333/my-kluster.git
+    repoURL: https://github.com/tom333/argocd-kubeflow.git
     targetRevision: HEAD
     # kustomize:
     #   version: v3.5.4
