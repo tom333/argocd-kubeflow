@@ -3,6 +3,7 @@
 Based on kubeflow manifests version 1.5.0-rc1
 
 Manifest are copied here, waiting migration on kustomize 4 with remote resources : https://github.com/kubeflow/manifests/issues/1797
+Or waiting for https://github.com/argoproj/argo-cd/issues/677 for removing local kustomization files
 
 ## Install
 add this app to argocd instance in your apps of apps :
@@ -27,23 +28,6 @@ spec:
       selfHeal: true
       allowEmpty: true
       prune: true
-  ignoreDifferences:
-    - kind: MutatingWebhookConfiguration
-      jqPathExpressions:
-        - ".webhooks"
-    - kind: ValidatingWebhookConfiguration
-      jqPathExpressions:
-        - ".webhooks[]?.clientConfig"
-    - kind: ValidatingWebhookConfiguration
-      jsonPointers:
-        - /webhooks/1/clientConfig/caBundle
-    - kind: ValidatingWebhookConfiguration
-      jsonPointers:
-        - /webhooks/2/clientConfig/caBundle
-    - kind: ValidatingWebhookConfiguration
-      jqPathExpressions:
-        - ".webhooks"
-
  ```
 
 ## Must add kustomize 3.2.0 to argocd :
