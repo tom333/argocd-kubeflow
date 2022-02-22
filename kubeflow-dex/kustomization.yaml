@@ -3,5 +3,5 @@ kind: Kustomization
 
 resources:
   #- ./overlays/istio
-  - git@github.com:kubeflow/manifests.git/common/dex/overlays/istio?ref=v1.5.1-rc1
+  - git@github.com:kubeflow/manifests.git/common/dex/overlays/istio?ref=v1.5.0-rc1
   - ./base-oidc-authservice/
