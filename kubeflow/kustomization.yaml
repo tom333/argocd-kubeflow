@@ -2,16 +2,15 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - ./common/kubeflow-namespace/base
-  - ./common/kubeflow-roles/base
-  - ./common/kubeflow-istio-resources/base
-  - ./apps/kfserving/upstream/overlays/kubeflow
-  - ./apps/centraldashboard/upstream/overlays/istio
-  - ./apps/admission-webhook/upstream/overlays/cert-manager
-  - ./apps/profiles/upstream/overlays/kubeflow
-  - ./apps/volumes-web-app/upstream/overlays/istio
-  - ./apps/tensorboard/tensorboards-web-app/upstream/overlays/istio
-  - ./apps/tensorboard/tensorboard-controller/upstream/overlays/kubeflow
-  - ./apps/training-operator/upstream/overlays/kubeflow
-  - ./apps/mpi-job/upstream/overlays/kubeflow
-  - ./common/user-namespace/base
+  - ../manifests/common/kubeflow-namespace/base
+  - ../manifests/common/kubeflow-roles/base
+  - ../manifests/common/istio-1-11/kubeflow-istio-resources/base
+  - ../manifests/apps/kfserving/upstream/overlays/kubeflow
+  - ../manifests/apps/centraldashboard/upstream/overlays/istio
+  - ../manifests/apps/admission-webhook/upstream/overlays/cert-manager
+  - ../manifests/apps/profiles/upstream/overlays/kubeflow
+  - ../manifests/apps/volumes-web-app/upstream/overlays/istio
+  - ../manifests/apps/tensorboard/tensorboards-web-app/upstream/overlays/istio
+  - ../manifests/apps/tensorboard/tensorboard-controller/upstream/overlays/kubeflow
+  - ../manifests/apps/training-operator/upstream/overlays/kubeflow
+  - ../manifests/common/user-namespace/base
