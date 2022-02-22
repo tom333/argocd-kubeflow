@@ -24,11 +24,12 @@ spec:
       allowEmpty: true
       prune: true
   ignoreDifferences:
-    - group: rbac.authorization.k8s.io
-      kind: ClusterRole
+    - kind: ClusterRole
       jqPathExpressions:
         - .rules
-    - group: admissionregistration.k8s.io
-      kind: MutatingWebhookConfiguration
+    - kind: MutatingWebhookConfiguration
+      jqPathExpressions:
+        - ".webhooks"
+    - kind: ValidatingWebhookConfiguration
       jqPathExpressions:
         - ".webhooks"
