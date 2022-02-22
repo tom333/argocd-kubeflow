@@ -3,4 +3,4 @@ kind: Kustomization
 
 resources:
   - ../manifests/common/cert-manager/cert-manager/base
-  - ../manifests/common/cert-namager/kubeflow-issuer/base
+  - ../manifests/common/cert-manager/kubeflow-issuer/base
