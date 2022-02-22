@@ -29,10 +29,10 @@ spec:
         - .rules
     - kind: MutatingWebhookConfiguration
       jqPathExpressions:
-        - .webhooks
+        - .webhooks]?.clientConfig.caBundle
     - kind: ValidatingWebhookConfiguration
       jqPathExpressions:
-        - .webhooks[]?.clientConfig
+        - .webhooks[]?.clientConfig.caBundle
     - kind: CustomResourceDefinition
       jqPathExpressions:
         - .spec.conversion.webhookClientConfig.caBundle
