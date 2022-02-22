@@ -32,4 +32,7 @@ spec:
         - ".webhooks"
     - kind: ValidatingWebhookConfiguration
       jqPathExpressions:
-        - ".webhooks"
+        - ".webhooks[]?.clientConfig"
+    - kind: CustomResourceDefinition
+      jqPathExpressions:
+        - ".spec.conversion.webhookClientConfig.caBundle"
