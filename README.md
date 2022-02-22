@@ -81,7 +81,9 @@ metadata:
   labels:
     app: kubeflow
   name: kubeflow-ingress
-  namespace: kubeflow
+  namespace: istio-system
+  annotations:
+    cert-manager.io/cluster-issuer: "kubeflow-self-signing-issuer"
 spec:
   rules:
     - host: kubeflow.internal.lan
@@ -94,4 +96,8 @@ spec:
                 name: istio-ingressgateway
                 port:
                   number: 80
+  tls:
+    - hosts:
+        - kubeflow.internal.lan
+      secretName: kubeflow.internal.lan
  ```
