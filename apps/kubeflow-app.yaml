@@ -23,16 +23,3 @@ spec:
       selfHeal: true
       allowEmpty: true
       prune: true
-  ignoreDifferences:
-    - kind: ClusterRole
-      jqPathExpressions:
-        - .rules
-    - kind: MutatingWebhookConfiguration
-      jqPathExpressions:
-        - ".webhooks"
-    - kind: ValidatingWebhookConfiguration
-      jqPathExpressions:
-        - ".webhooks[]?.clientConfig"
-    - kind: CustomResourceDefinition
-      jqPathExpressions:
-        - ".spec.conversion.webhookClientConfig.caBundle"
