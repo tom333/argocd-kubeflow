@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
   - ../manifests/common/knative/knative-serving/base
+  - ../manifests/common/istio-1-11/cluster-local-gateway/base

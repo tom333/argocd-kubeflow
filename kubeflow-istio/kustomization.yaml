@@ -5,4 +5,3 @@ resources:
   - ../manifests/common/istio-1-11/istio-crds/base
   - ../manifests/common/istio-1-11/istio-namespace/base
   - ../manifests/common/istio-1-11/istio-install/base
-  - ../manifests/common/istio-1-11/cluster-local-gateway/base
