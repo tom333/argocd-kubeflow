@@ -5,8 +5,9 @@ resources:
   - ../manifests/common/kubeflow-namespace/base
   - ../manifests/common/kubeflow-roles/base
   - ../manifests/common/istio-1-11/kubeflow-istio-resources/base
-  - ../manifests/apps/kfserving/upstream/overlays/kubeflow
-  - ../manifests/apps/centraldashboard/upstream/overlays/istio
+  - ../manifests/contrib/kserve/kserve
+  - ../manifests/contrib/kserve/models-web-app/overlays/kubeflow
+  - ../manifests/apps/centraldashboard/upstream/overlays/kserve
   - ../manifests/apps/admission-webhook/upstream/overlays/cert-manager
   - ../manifests/apps/profiles/upstream/overlays/kubeflow
   - ../manifests/apps/volumes-web-app/upstream/overlays/istio

@@ -85,3 +85,11 @@ spec:
         - kubeflow.internal.lan
       secretName: kubeflow.internal.lan
  ```
+
+## if error like https://github.com/kubeflow/manifests/issues/1931
+`upstream connect error or disconnect/reset before headers. reset reason: connection failure, transport failure reason: TLS error: 268435703:SSL routines:OPENSSL_internal:WRONG_VERSION_NUMBER`
+
+
+launch command :
+
+`kubectl get deploy -n kubeflow  -o name | xargs kubectl rollout restart -n kubeflow`
