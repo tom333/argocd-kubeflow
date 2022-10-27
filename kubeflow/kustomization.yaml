@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
   - ../manifests/common/kubeflow-namespace/base
   - ../manifests/common/kubeflow-roles/base
-  - ../manifests/common/istio-1-11/kubeflow-istio-resources/base
+  - ../manifests/common/istio-1-14/kubeflow-istio-resources/base
   - ../manifests/contrib/kserve/kserve
   - ../manifests/contrib/kserve/models-web-app/overlays/kubeflow
   - ../manifests/apps/centraldashboard/upstream/overlays/kserve
