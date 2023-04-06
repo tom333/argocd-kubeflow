@@ -1,6 +1,6 @@
 # ArgoCD apps of apps for Kubeflow
 
-Based on kubeflow manifests version 1.5.0
+Based on kubeflow manifests version 1.7.0
 
 Manifest are copied here, waiting migration on kustomize 4 with remote resources : https://github.com/kubeflow/manifests/issues/1797
 Or waiting for https://github.com/argoproj/argo-cd/issues/677 for removing local kustomization files
